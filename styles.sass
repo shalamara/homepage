@@ -1,0 +1,401 @@
+/* globals/resets/variables */
+$royal: #120087
+$lightblue: #93c1d1
+
+$mirage: #574649
+$grey: #d3d3d3
+$maroon: #7C251E
+
+$script: caveat, sans-serif
+$serif: rokkitt, serif
+$sans: Lato, sans-serif
+
+body
+  font-family: $serif
+  padding: 0
+  margin: 0
+  padding-top: 130px
+a
+  text-decoration: none
+  color: inherit
+  cursor: pointer
+section
+  max-width: 1000px
+  padding: 50px 2vw
+  margin: 0 auto
+  border-bottom: 5px dashed $lightblue
+.icon
+  display: inline-block
+  width: 1em
+  height: 1em
+  z-index: 100
+  fill: $mirage
+  &:hover
+    fill: $grey
+.elements-icon
+  fill: none
+  stroke: $royal
+  stroke-width: 6
+  height: 1.85em
+  width: 1.85em
+  &:hover
+    fill: none
+
+
+.clear-fix
+  clear: both
+
+/* header */
+.logo
+  background-image: url('assets/logo.svg')
+  background-repeat: no-repeat
+  height: 50px
+  width: 30px
+  display: inline-block
+  transition: all .5s ease-in
+h1
+  font-family: caveat
+  text-indent: 10vw
+  color: $grey
+  font-size: 3rem
+  display: inline-block
+  margin: 1rem
+  transition: all .5s ease-in
+
+h2
+  font-family: $sans
+  font-size: 1.82rem
+  color: $royal
+  text-shadow: 1px 2px 5px $mirage
+  font-weight: 200
+#top
+  position: absolute
+  top: 0
+header
+  position: fixed
+  top: 0
+  width: 100%
+  height: 90px
+  background: linear-gradient(rgb(23,23,23), rgb(160,160,160))
+  z-index: 9
+  transition: all .5s ease-in
+
+
+.knot
+  background-image: url("assets/knot.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  filter: opacity(.1) blur(1px) grayscale(70%)
+  background-position: center center
+  position: fixed
+  top: 0
+  width: 100%
+  height: 90px
+
+  transition: all .5s ease-in
+
+ul
+  list-style-type: none
+  display: flex
+  flex-flow: row
+  padding: 0
+  width: 95%
+  justify-content: flex-end
+  transform: translateY(-200%)
+
+  z-index: 10
+  a:nth-child(1)
+    display: none
+li
+  padding: 10px 23px
+  color: $grey
+  &:hover
+    color: $mirage
+    font-weight: bold
+    text-shadow: 0 0 3px  white
+
+
+#headerscrolled
+  height: 55px
+  transition: all .5s ease-out
+  ul
+    transform: translateY(-160%)
+  li:nth-child(n+1)
+    display: none
+  a:nth-child(1)
+    display: inline-block
+  h1
+    margin: .2rem 1rem
+
+    font-size: 2.6rem
+    transition: all .5s ease-out
+  .logo
+    height: 35px
+    width: 25px
+    transition: all .5s ease-out
+  .knot
+    height: 55px
+    transition: all .5s ease-out
+
+
+
+
+
+/* GALLERY  */
+
+#mobile-gallery
+  display: none !important
+
+
+
+
+#gallery
+  width: 90%
+  max-width: 800px
+  margin: 0 auto
+  display: inline-block
+#mobile-gallery
+  width: 90%
+  max-width: 250px
+  margin: 0 auto
+#gallery img, #mobile-gallery img
+  transition: transform
+  display: block
+  width: 100%
+  height: auto
+
+
+
+
+/* ABOUT */
+#about
+  div
+    display: flex
+    flex-flow: row
+  img
+    margin: 0 30px
+    float: left
+    bottom: 1em
+    width: 200px
+    height: 250px
+    border-bottom: 2.3rem solid $grey
+    &.icon
+      width: 24px
+      height: 24px
+      float: none
+      border-bottom: none
+      margin: 0 15px
+
+  p
+    position: relative
+    line-height: 190%
+    text-indent: 5rem
+
+// QUOTE
+#quote
+  p
+
+  img
+    margin: 0 30px
+    float: left
+    bottom: 1em
+    width: 200px
+    height: 250px
+    border-bottom: 2.3rem solid $grey
+  .quote
+    color: $maroon
+    font-size: 2.35em
+    text-indent: 5rem
+    text-align: center
+    font-weight: bold
+    font-family: $script
+    display: inline-block
+  .quotes
+    fill: $maroon
+    width: .6em
+    height: .6em
+    margin: .4em
+    &:hover
+      fill: $maroon
+
+
+.para
+  display: flex
+  flex-flow: column
+  justify-content: center
+.flourish
+  max-width: 500px
+  margin: 0 auto
+
+
+
+
+
+
+
+
+/* CONTACT */
+form
+  display: flex
+  flex-flow: row
+  align-items: flex-start
+input
+  display: block
+  margin: 3rem 0
+  width: 100%
+textarea
+  padding: 1rem
+  margin: 2rem 0
+  width: 100%
+.right
+  width: 40%
+  display: block
+  margin: auto
+  transform: translateY(10%)
+.left
+  width: 40%
+  display: block
+  margin: auto
+  transform: translateY(-10%)
+.sent
+  margin: auto
+  display: none
+/* FOOTER */
+footer
+
+  display: flex
+  color: $grey
+  font-weight: 100
+  font-variant: small-caps
+  font-size: 1rem
+  justify-content: space-around
+  background: linear-gradient(rgb(160,160,160), rgb(143,143,143))
+  height: 40px
+  margin-top: 70px
+  .icon
+    margin-top: 1rem
+  a
+    position: relative
+    z-index: 100
+  & .arrow-up
+    height: 0
+    width: 0
+    border-left: 9px solid transparent
+    border-right: 9px solid transparent
+    border-bottom: 9px solid $grey
+    display: inline-block
+    margin: 0 20px
+  & .logo
+    background-image: url("../images/second-seven-logo.png")
+    height: 19px
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: right
+    margin-top: 1rem
+    width: 75px
+  & .jump
+    display: inline-block
+    margin-top: 1rem
+    &:hover
+      color: white
+      div
+        border-bottom-color: white
+  & .knot
+    position: absolute
+    top: auto
+    height: 40px
+    left: 0
+
+/* media queries */
+@media screen and (max-width: 340px)
+  .owl-page
+    display: none !important
+  #gallery
+    display: none !important
+  #mobile-gallery
+    display: inline-block !important
+    transform: translateX(17px)
+  #mobile-gallery img
+    transition: transform
+    display: block
+    width: 100%
+    height: auto
+  .para
+    display: inline-block
+
+@media screen and (max-width: 668px)
+  ul
+    justify-content: space-around
+    width: 100%
+    transform: translateY(10%)
+  body
+    margin-top: 5rem
+  header
+    height: 150px
+    white-space: nowrap
+  #h1
+    font-size: 2.74rem
+    margin: 0
+  .button
+    display: inline-block !important
+
+  #headerscrolled
+    h1 span
+      display: none
+    ul
+      justify-content: flex-end
+  .knot
+    height: 150px
+
+
+  h1
+    text-indent: 0
+
+
+  textarea
+    margin: 0
+
+  .button
+    display: inline-block !important
+
+  #about div
+    display: flex
+    flex-flow: column
+    img
+      margin: 2em auto
+      float: none
+      display: block
+
+  #quote img
+    margin: 4rem auto
+    float: none
+    display: block
+  .para
+    display: inline-block
+  #contact form
+    flex-flow: column
+    .left, .right
+      width: 80%
+
+
+@media screen and (min-width: 669px) and (max-width: 1199px)
+  h1
+    white-space: no-wrap
+    text-indent: 0
+  .button
+    display: inline-block !important
+  #contact form
+    flex-flow: row
+
+
+@media screen and (min-width: 1200px)
+  h1
+    white-space: no-wrap
+  .menu
+  .button
+    display: inline-block !important
+
+
+
+
+/* jnfkndv */
